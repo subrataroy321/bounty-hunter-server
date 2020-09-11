@@ -20,6 +20,6 @@ app.get('/', (req, res) => {
     res.send('You are at home page of Bounty Hunter Server')
 })
 
-app.listen(8000, () => {
-    console.log('listen to port 8000')
+app.listen(9000, () => {
+    console.log('listen to port 9000')
 })

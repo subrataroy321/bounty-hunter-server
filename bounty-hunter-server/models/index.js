@@ -1,9 +1,12 @@
+require('dotenv').config();
+MONGO_URI = process.env.MONGO_URI
+
 // set up mongoose connection
 const mongoose = require('mongoose')
 
 // mongo connection string
 // will create a mongodb database if it doesn't exists
-mongoose.connect( 'mongodb+srv://BountyHunter:BountyHunter@bountyhunter.gfnyh.mongodb.net/BountyHunter?retryWrites=true&w=majority' || 'mongodb://localhost/bountyhunters', {
+mongoose.connect( MONGO_URI || 'mongodb://localhost/bountyhunters', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: true
